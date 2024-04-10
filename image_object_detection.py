@@ -1,4 +1,3 @@
-import cv2 as cv
 from yolov8 import YOLOv8
 import matplotlib.pyplot as plt
 import numpy as np
