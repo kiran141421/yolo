@@ -1,7 +1,6 @@
 from flask import Flask 
 from PIL import Image
 from flask import request
-import cv2 as cv
 import base64
 import io
 import numpy as np
@@ -25,7 +24,7 @@ def index_page():
     # Convert PIL Image to numpy array
     img_np = np.array(image)
     img = img_np
-    
+
     # im_arr = np.frombuffer(img_bytes, dtype=np.uint8)  # im_arr is one-dim Numpy array
     # img = cv.imdecode(im_arr, flags=cv.IMREAD_COLOR)
 
