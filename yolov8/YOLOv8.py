@@ -43,6 +43,7 @@ class YOLOv8:
         # Resize input image
         input_img = cv2.resize(input_img, (self.input_width, self.input_height))
 
+
         # Scale input pixel values to 0 to 1
         input_img = input_img / 255.0
         input_img = input_img.transpose(2, 0, 1)
