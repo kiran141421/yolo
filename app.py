@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask, jsonify
 from PIL import Image
 from flask import request
 import base64
@@ -15,8 +15,10 @@ def hello_world():
 
 @app.route("/image", methods = ['POST'])
 def index_page():
-    img = request.form['image']
+    # img = request.form['image']
+    data = request.get_json()
 
+    img = data['file_data']
     img_bytes = base64.b64decode(img)
 
     image = Image.open(io.BytesIO(img_bytes))
